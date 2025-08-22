@@ -1,0 +1,34 @@
+I based myself on the notation of each algorithm and ran
+one example of each (5k random, 5k reversed and 5k sorted) and noted the
+time of each example for comparison.
+
+
+sort1 uses: Bubble sort
+How do you know?: So, for bubble sort, I know that Big O is the same as selection
+sort; however, its Capital Omega is smaller. I can prove this by running a sorted
+list, which results in a shorter time. Additionally, in the last few minutes of
+the week 3 lecture, Professor David showed us a video that demonstrates that
+bubble sort takes longer to sort a random list than selection sort.
+
+_____________________
+sort2 uses: Merge sort
+How do you know?: Since Big O and Capital Omega have the same notation, I was able
+to check the timing for both random and sorted lists.
+
+_____________________
+sort3 uses: Selection sort
+How do you know?: Et voilà, selection sort also has the same Big O and Capital Omega;
+however, merge sort is more efficient, and time comparison can prove it.
+
+
+
+list             |       sort1       |       sort2       |        sort3       |
+random5k         | real    0m0.050s  | real    0m0.013s  | real    0m0.036s   |
+reversed5k       | real    0m0.058s  | real    0m0.012s  | real    0m0.044s   |
+sorted5k         | real    0m0.008s  | real    0m0.012s  | real    0m0.036s   |
+_______________________________________________________________________________
+Big O            |       O(n2)       |     O(n log n)    |        O(n2)       |
+Capital Omega Ω  |       Ω(n)        |     Ω(n log n)    |        Ω(n2)       |
+_______________________________________________________________________________
+Answer           |   Bubble sort     |    Merge sort     |   Selection sort   |
+
