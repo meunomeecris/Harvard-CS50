@@ -14,29 +14,33 @@ They are not meant to be copied directly for your submissions.
 ```bash
 
 📁 CS50
-├── 📁 week0
+├── 📁 week0 (Scratch)
 │   └── starting from Scratch
 │ 
-├── 📁 week1
+├── 📁 week1 (C)
 │   └── me.c
 │   └── mario-more.c 
 │   └── cash.c
 │ 
-├── 📁 week2
+├── 📁 week2 (Arrays)
 │   └── scrabble.c
 │   └── readability.c
 │   └── substitution.c
 │ 
-├── 📁 week3
+├── 📁 week3 (Algorithms)
 │   └── sort.c
 │   └── plurality.c
 │   └── runoff.c
 │   └── tideman.c
 │ 
-├── 📁 week4
+├── 📁 week4 (Memory)
 │   └── volume.c
 │   └── filter-less.c
 │   └── recover.c
+│ 
+├── 📁 week5 (Data Structures)
+│   └── inheritance.c
+│   └── speller.c
 
 ```
 
