@@ -41,6 +41,13 @@ They are not meant to be copied directly for your submissions.
 ├── 📁 week5 (Data Structures)
 │   └── inheritance.c
 │   └── speller.c
+│ 
+├── 📁 week5 (Python)
+│   └── sentimental-hello.c
+│   └── sentimental-cash.c
+│   └── sentimental-mario-more.c
+│   └── sentimental-readability.c
+│   └── DNA.c
 
 ```
 
