@@ -42,12 +42,18 @@ They are not meant to be copied directly for your submissions.
 │   └── inheritance.c
 │   └── speller.c
 │ 
-├── 📁 week5 (Python)
-│   └── sentimental-hello.c
-│   └── sentimental-cash.c
-│   └── sentimental-mario-more.c
-│   └── sentimental-readability.c
-│   └── DNA.c
+├── 📁 week6 (Python)
+│   └── sentimental-hello.py
+│   └── sentimental-cash.py
+│   └── sentimental-mario-more.py
+│   └── sentimental-readability.py
+│   └── DNA.py
+│ 
+├── 📁 week7 (SQL)
+│   └── songs.sql
+│   └── sentimentmovies.sql
+│   └── fiftyville.sql
+
 
 ```
 
