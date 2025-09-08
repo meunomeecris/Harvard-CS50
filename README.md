@@ -51,7 +51,7 @@ They are not meant to be copied directly for your submissions.
 │ 
 ├── 📁 week7 (SQL)
 │   └── songs.sql
-│   └── sentimentmovies.sql
+│   └── movies.sql
 │   └── fiftyville.sql
 
 
