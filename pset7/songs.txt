@@ -1,0 +1,37 @@
+1 - If songs.db contains the top 100 songs of one listener from 2018,
+how would you characterize their audio aura?
+
+SELECT AVG(energy), AVG(valence), AVG(danceability) FROM songs;
++-------------+--------------+-------------------+
+| AVG(energy) | AVG(valence) | AVG(danceability) |
++-------------+--------------+-------------------+
+| 0.65906     | 0.484443     | 0.71646           |
++-------------+--------------+-------------------+
+
+SELECT AVG(AVG(energy) AND AVG(valence) AND AVG(danceability)) FROM songs;
+
+According to the Spotify article,
+I would say that this person has the Yellow Aura.
+
+
+2 - Hypothesize about why the way you’ve calculated this aura might not be very
+representative of the listener. What better ways of calculating this aura would you propose?
+
+Well, if I understand correctly, the average can mix all the differences, and since Spotify
+measures these values ​​from 0.0 to 1.0, I could, for example, filter the songs that are danceable,
+more than 0.5, and so on...
+
+I understand that this person likes more energetic and relaxing music than sad music.
+
+SELECT SUM(danceability < 0.5), SUM(energy < 0.5), SUM(valence < 0.5)FROM songs;
++-------------------------+-------------------+--------------------+
+| SUM(danceability < 0.5) | SUM(energy < 0.5) | SUM(valence < 0.5) |
++-------------------------+-------------------+--------------------+
+| 4                       | 13                | 55                 |
++-------------------------+-------------------+--------------------+
+sqlite> SELECT SUM(danceability > 0.5), SUM(energy > 0.5), SUM(valence > 0.5) FROM songs;
++-------------------------+-------------------+--------------------+
+| SUM(danceability > 0.5) | SUM(energy > 0.5) | SUM(valence > 0.5) |
++-------------------------+-------------------+--------------------+
+| 96                      | 87                | 45                 |
++-------------------------+-------------------+--------------------+
