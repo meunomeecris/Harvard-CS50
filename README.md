@@ -53,8 +53,10 @@ They are not meant to be copied directly for your submissions.
 │   └── songs.sql
 │   └── movies.sql
 │   └── fiftyville.sql
-
-
+│ 
+├── 📁 week8 (HTML, CSS, JavaScript)
+│   └── trivia.html
+│   └── homepage.html
 ```
 
 ## Author
