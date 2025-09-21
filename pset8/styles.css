@@ -1,0 +1,183 @@
+/* GENERAL */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Jersey 15", sans-serif;
+    background: #e5e5e5;
+    color: #404040;
+    margin: 0;
+    padding: 0;
+}
+
+/* Title bar for each page */
+.bar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    background: #e5e5e5;
+    border: 2px solid #404040;
+    height: 40px;
+    margin: 12px;
+}
+
+/* INDEX PAGE */
+#display-menu-page {
+    display: flex;
+}
+
+#menu-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 130px;
+    padding: 10px;
+}
+
+.menu-item-title {
+    font-size: 20px;
+    text-align: center;
+    background: #fff;
+    color: #404040;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.menu-item-title,
+a {
+    margin-top: 2px;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+#content-page {
+    width: 1000px;
+    margin: 10px auto;
+    background: #e5e5e5;
+    border: 2px solid #404040;
+    box-shadow: 5px 10px #404040;
+    display: block;
+}
+
+/* HOME PAGE */
+.content-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-home img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid #404040;
+}
+
+.content-home p {
+    font-size: 24px;
+}
+
+.content-home h1 {
+    font-size: 44px;
+}
+
+
+/* ABOUT ME PAGE */
+.content-aboutme {
+    margin: 10px;
+}
+
+.content-aboutme ul,
+li {
+    font-size: 24px;
+}
+
+.tools-list {
+    margin: 10px;
+}
+
+.tools-list img {
+    filter: grayscale(100%);
+    width: 50px;
+    height: 50;
+    margin: 10px;
+}
+
+img:hover {
+    filter: grayscale(0%);
+}
+
+/* CS5O PAGE */
+.folders {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.folders a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.folders p {
+    font-size: 20px;
+    text-align: center;
+    color: #404040;
+    cursor: pointer;
+}
+
+/* CONTACT PAGE */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email-link {
+    font-size: 22px;
+    font-weight: bold;
+    color: #404040;
+    text-decoration: none;
+    border: 2px solid #404040;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.email-link:hover {
+    background: #404040;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0;/
+}
+
+footer p {
+    font-size: 16px;
+}
+
+
+/* CS50 Duck */
+#cs50-duck {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    z-index: 1000;
+}

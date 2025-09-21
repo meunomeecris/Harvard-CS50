@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Part1 - If is the correct answer
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#checkAnswer1').innerHTML = 'Correct!';
+                });
+                // Part1 - If is the incorrect answer
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function() {
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector('#checkAnswer1').innerHTML = 'Incorrect!';
+                    });
+                };
+
+                //Part2 - Check answer
+                let check = document.querySelector('#check').addEventListener('click', function() {
+                    let answer = document.querySelector('#answer');
+                    if (answer.value === 'Portuguese') {
+                        answer.style.backgroundColor = 'green';
+                        document.querySelector('#checkAnswer2').innerHTML = 'Correct!';
+                    } else {
+                        answer.style.backgroundColor = 'red';
+                        document.querySelector('#checkAnswer2').innerHTML = 'Incorrect!';
+                    }
+                });
+
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Brazil is the only team to have played in every World Cup. How many titles have they won so far?</h3>
+                <button class="incorrect">3 Times</button>
+                <button class="incorrect">4 Times</button>
+                <button class="correct">5 Times</button>
+                <button class="incorrect">6 Times</button>
+
+                <p id="checkAnswer1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What language is spoken in Brazil?</h3>
+                <input autocomplete="off" id="answer" placeholder="Type your answer" type="text">
+                <button id="check">Check Answer</button>
+
+                <p id="checkAnswer2"></p>
+            </div>
+        </div>
+    </body>
+
+</html>
