@@ -57,6 +57,10 @@ They are not meant to be copied directly for your submissions.
 ├── 📁 week8 (HTML, CSS, JavaScript)
 │   └── trivia.html
 │   └── homepage.html
+│ 
+├── 📁 week9 (Flusk)
+│   └── birthday
+│   └── finance
 ```
 
 ## Author
