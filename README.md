@@ -61,6 +61,9 @@ They are not meant to be copied directly for your submissions.
 ├── 📁 week9 (Flusk)
 │   └── birthday
 │   └── finance
+│ 
+├── 📁  Final Project
+│   └── Mac Cleaner em C com CLI
 ```
 
 ## Author
