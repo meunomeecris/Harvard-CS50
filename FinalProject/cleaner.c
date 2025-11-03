@@ -1,17 +1,17 @@
 #include "cs50.h"
 #include "menu_cli.h"
-#include <ctype.h>
-#include <stdlib.h>
+#include "core.h"
 #include <stdio.h>
-#include <unistd.h>
 
+// Max number of candidates
+#define MAX 9
 
 int main(void)
 {
-    int input = menu_cli();
-    printf("Option: %d\n", input);
+    int user_option = menu_cli();
+    printf("You choose option: %d\n", user_option);
+
+    read_and_clean(&user_option);
+
+    return 0;
 }
-
-
-
-

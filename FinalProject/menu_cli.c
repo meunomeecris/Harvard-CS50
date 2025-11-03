@@ -4,14 +4,21 @@
 #include <stdio.h>
 #include <unistd.h>
 
-int logo(void);
+int welcome(void);
+void menu(void);
+int selectOption(void);
 
 int menu_cli(void)
 {
-    char n;
-    logo();
-    sleep(2);
+    welcome();
+    printf("\n");
+    menu();
 
+    return selectOption();
+}
+
+int welcome(void) 
+{
     printf("\n");
     printf("     \033[0;32m-------------------------------\n");
     printf("          WELCOME TO MAC CLEANUP    \n");
@@ -21,7 +28,11 @@ int menu_cli(void)
 
     sleep(1);
 
-    printf("\n");
+    return 0;
+}
+
+void menu(void) 
+{
     printf("          \033[0;32m---------------------\n");
     printf("          |     MENU OPTIONS   |\n");
     printf("          ---------------------\n");
@@ -38,6 +49,12 @@ int menu_cli(void)
     printf("\n");
     
     sleep(2);
+}
+
+int selectOption(void) 
+{
+    char n;
+
     do
     {
         printf("\033[0;32m\n");
@@ -58,51 +75,5 @@ int menu_cli(void)
     
     // Convert type Char to Int
     return n - '0';
-}
 
-
-int logo() 
-{
-    const char *lines[] = {
-        "                        .8 ",
-        "                      .888",
-        "                    .8888'",
-        "                   .8888'",
-        "                   888'",
-        "                   8'",
-        "      .88888888888. .88888888888.",
-        "   .8888888888888888888888888888888.",
-        " .8888888888888888888888888888888888.",
-        ".&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'",
-        "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'",
-        "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'",
-        "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:",
-        "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:",
-        "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:",
-        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%.",
-        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%.",
-        "`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%.",
-        " `00000000000000000000000000000000000'",
-        "  `000000000000000000000000000000000'",
-        "   `0000000000000000000000000000000'",
-        "     `###########################'",
-        "jgs    `#######################'",
-        "         `#########''########'",
-        "           `\"\"\"\"\"\"'  `\"\"\"\"\"' ",
-        ""
-    };
-    
-
-    // Número de linhas
-    size_t n_lines = sizeof(lines) / sizeof(lines[0]);
-
-    // Imprime cada linha
-    for (size_t i = 0; i < n_lines; ++i)
-    {
-        printf("\033[0;32m");
-        puts(lines[i]);
-        printf("\033[0m");
-    }
-
-    return 0;
 }
