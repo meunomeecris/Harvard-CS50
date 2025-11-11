@@ -54,15 +54,16 @@ int create_fullpath(string path)
 
     char path_space[512];
 
-    snprintf(path_space, sizeof(path_space), "%s/%s", path, computerPath);
+    snprintf(path_space, sizeof(path_space), "%s/%s", computerPath, path);
 
     long size = calculate_dir_size(path_space);
-    printf("Tamanho total: %ld bytes\n", size);
-
-    printf("Complete Path: %s/%s\n",computerPath, path);
+    printf("\033[0;32m-------------------------------\n");
+    printf("Clean: %s\n", path);
+    printf("Liberate Space: %ld bytes\n", size);
 
     clear_directory(path_space);
-    printf("Diretório limpo com sucesso!\n");
+    printf("Clean Directory!\n");
+    printf("-------------------------------\033[0m\n");
 
     return 0;
 }
@@ -70,8 +71,7 @@ int create_fullpath(string path)
 long calculate_dir_size(const char *path) {
     DIR *dir = opendir(path);
     if (!dir) {
-        // printf("Erro ao abrir diretório %s\n", path);
-        return 0;
+        return 1;
     }
 
     struct dirent *entry;
@@ -101,7 +101,6 @@ long calculate_dir_size(const char *path) {
 int clear_directory(const char *path) {
     DIR *dir = opendir(path);
     if (!dir) {
-        // printf("Erro ao abrir diretório %s\n", path);
         return 1;
     }
 
