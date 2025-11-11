@@ -47,3 +47,12 @@ total_freed=$((total_freed + freed_cache))
 echo "✨ Cache size after:"
 du -sh "$USER_HOME/Library/Caches"
 echo
+
+
+
+--
+Your program has three main modules:
+main.c — where everything starts.
+It calls menu_cli() (for user input) and then passes that choice to read_and_clean() (to execute the cleanup).
+menu_cli.c — handles user experience (display, input, validation).
+core.c — does the system work: builds paths, calculates sizes, and cleans directories.
