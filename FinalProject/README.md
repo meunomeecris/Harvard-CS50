@@ -167,4 +167,10 @@ make
 4. Follow the menu prompts to clean directories safely.
 
 
+# Contact me 
+[Linkedin](https://www.linkedin.com/in/meunomeecris/) | 
+ <a href="(meunomeecriss@gmail.com)"> Email </a>
+
+Thanks to the entire CS50 crew for an amazing course. <3
+
 
