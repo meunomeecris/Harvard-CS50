@@ -63,7 +63,7 @@ They are not meant to be copied directly for your submissions.
 │   └── finance
 │ 
 ├── 📁  Final Project
-│   └── Mac Cleaner em C com CLI
+│   └── Mac Cleanup em C com CLI
 ```
 
 ## Author
