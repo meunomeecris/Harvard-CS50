@@ -23,26 +23,24 @@ int main(void)
         user_option = menu_cli();
 
         if (user_option == 0)
-        {   
+        {
             sleep(1);
-            printf(GREEN "=========== MAC CLEANUP ===========\n");
-            printf("See next time you mac freez!\n" RESET);
-            sleep(1);
-            print_logo();
+            printf(GREEN "================ MAC CLEANUP =================\n");
+            printf("Bye! See you next time your MacBook freeze!\n" RESET);
             break;
         }
 
         read_and_clean(&user_option);
-        
+
         sleep(1);
         printf(YELLOW "\nPress ENTER to return to the menu" RESET);
-        getchar(); 
+        getchar();
     }
 
-return 0;
+    return 0;
 }
 
-void print_logo(void) 
+void print_logo(void)
 {
     printf(GREEN "\n");
     printf("                                ,----,.               \n");

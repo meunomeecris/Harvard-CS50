@@ -9,7 +9,6 @@
 #define RED "\033[0;31m"
 #define RESET "\033[0m"
 
-
 int show_welcome(void);
 void show_menu(void);
 int verify_user_option(void);
@@ -25,12 +24,12 @@ int menu_cli(void)
 int show_welcome(void) 
 {
     printf("\n");
-    printf(GREEN "     ===============================\n");
-    printf("          WELCOME TO MAC CLEANUP    \n");
-    printf("            for iOS Developers    \n");
-    printf("     ---------- CS50 2025 ----------\n");
-    printf("          made by Cris Messias      \n");
-    printf("     ===============================" RESET);
+    printf(GREEN "          ===============================\n");
+    printf("               WELCOME TO MAC CLEANUP    \n");
+    printf("                 for iOS Developers    \n");
+    printf("          ---------- CS50 2025 ----------\n");
+    printf("               made by Cris Messias      \n");
+    printf("          ===============================" RESET);
 
     sleep(3);
 
@@ -39,21 +38,21 @@ int show_welcome(void)
 
 void show_menu(void) 
 {
-    printf(GREEN "          -----------------------\n");
-    printf("          |#### MENU OPTIONS ####|\n");
-    printf("          -----------------------\n");
-    printf("          | 1: Cleanup Caches    |\n");
-    printf("          -----------------------\n");
-    printf("          | 2: Cleanup Logs      |\n");
-    printf("          -----------------------\n");
-    printf("          | 3: Cleanup Cookies   |\n");
-    printf("          -----------------------\n");
-    printf("          | 4: Cleanup Xcode     |\n");
-    printf("          -----------------------\n");
-    printf("          | 5: Cleanup All       |\n");
-    printf("          -----------------------\n");
-    printf("          | 0: Exit              |\n");
-    printf("          -----------------------" RESET);
+    printf(GREEN "              -----------------------\n");
+    printf("              |#### MENU OPTIONS ####|\n");
+    printf("              -----------------------\n");
+    printf("              | 1: Cleanup Caches    |\n");
+    printf("              -----------------------\n");
+    printf("              | 2: Cleanup Logs      |\n");
+    printf("              -----------------------\n");
+    printf("              | 3: Cleanup Cookies   |\n");
+    printf("              -----------------------\n");
+    printf("              | 4: Cleanup Xcode     |\n");
+    printf("              -----------------------\n");
+    printf("              | 5: Deep Cleaning     |\n");
+    printf("              -----------------------\n");
+    printf("              | 0: Exit              |\n");
+    printf("              -----------------------" RESET);
     printf("\n");
     
     sleep(1);
