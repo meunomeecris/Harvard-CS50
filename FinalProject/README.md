@@ -6,6 +6,7 @@
 Xcode uses a lot of space, and sometimes your Mac may show low space warnings or even crash. Cleaning Xcode folders manually, like caches, logs, cookies, crash reports, DerivedData, or Archives, can take time.
 This program automates the cleanup process, making it faster, easier, and safer. It was initially created for personal use, but I decided to make it user-friendly with clear messages and error handling. 
 
+
 **For example, it asks for confirmation before deleting any files.**
 The program is written in C, using knowledge from the CS50 course, internet resources, and chatGPT. 
 It uses libraries such as:
@@ -38,3 +39,9 @@ The code is organized into different files, and functions are separated to make 
 * main.c: the starting point. Calls `menu_cli()` (for user input) and passes the choice to `read_and_clean()` to perform cleanup.
 * menu_cli.c: handles the user interface: displays messages, gets input, and validates it.
 * core.c: performs system tasks: builds paths, calculates folder sizes, and deletes files.
+
+
+
+I have all the courses documented on my GitHub.
+https://github.com/meunomeecris/Harvard-CS50
+> Note: these solutions are shared for educational and demonstration purposes only.
