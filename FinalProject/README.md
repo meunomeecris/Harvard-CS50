@@ -2,7 +2,7 @@
 #### Video Demo: https://youtu.be/ZOA7sej3EOc
 #### Description:
 
-##Mac Cleanup##
+## Mac Cleanup
 It is a program created for iOS developers who use Xcode. As we know, Xcode uses a lot of space, and sometimes your Mac may show low space warnings or even crash. Cleaning Xcode folders manually, like caches, logs, cookies, crash reports, DerivedData, or Archives, can take time.
 
 This program automates the cleanup process, making it faster, easier, and safer. It was initially created for personal use, but I decided to make it user-friendly with clear messages and error handling.
