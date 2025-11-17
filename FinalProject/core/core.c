@@ -11,14 +11,10 @@
 #define RED "\033[0;31m"
 #define RESET "\033[0m"
 
-
-// Path ~/Library (user)
 #define XCODE_ARCHIVES "Library/Developer/Xcode/Archives"
 #define XCODE_DERIVED_DATA "Library/Developer/Xcode/DerivedData"
 #define XCODE_DEVICES "Library/Developer/CoreSimulator/Devices"
 #define XCODE_CRASH_REPORTER "Library/Application Support/CrashReporter"
-
-// Path /Library (system)
 #define CACHES "Library/Caches"
 #define LOG "Library/Logs"
 #define COOKIES "Library/Cookies"
@@ -95,24 +91,13 @@ int clean_path(string path)
         snprintf(path_space, sizeof(path_space), "%s/%s", home, path);
     }
 
-    // Progress calculating size
-    printf(YELLOW "Calculating size (may take some time)\n" RESET);
-    for (int i = 0; i < 3; i++) {
-        fflush(stdout);
-        sleep(1);
-        printf(".");
-    }
-    printf("\n");
-
     long before = calculate_dir_size(path_space);
     printf("\n");
     printf(GREEN "-------------------------------\n");
     printf("%s\n", path_space);
 
-    clear_directory(path_space);
-
-    // Progress feedback
-    printf("Cleaning");
+    // Progress calculating size
+    printf(GREEN "Calculating size (may take some time)" RESET);
     for (int i = 0; i < 3; i++) {
         fflush(stdout);
         sleep(1);
@@ -120,8 +105,20 @@ int clean_path(string path)
     }
     printf("\n");
 
+    sleep(1);
+    clear_directory(path_space);
+
+    // Progress feedback
+    printf(GREEN "Cleaning");
+    for (int i = 0; i < 3; i++) {
+        fflush(stdout);
+        sleep(1);
+        printf(".");
+    }
+    printf("\n"RESET);
+
     long after = calculate_dir_size(path_space);
-    printf("Freed: %.2f MB\n", (before - after) / (1024.0 * 1024.0));
+    printf(GREEN "Freed: %.2f MB\n", (before - after) / (1024.0 * 1024.0));
     printf("Clean Directory!\n");
     printf("-------------------------------\n" RESET);
 

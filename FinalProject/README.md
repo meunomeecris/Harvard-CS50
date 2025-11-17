@@ -3,7 +3,7 @@
 #### Description:
                       
 ## Mac Cleanup in C (CLI)
-- A friendly CLI UI (colored output, clear messages).
+- A friendly MENU UI (colored output, clear messages).
 - Scans specific user folders (Caches, Logs, Cookies, CrashReporter, Xcode DerivedData, Xcode Archives).
 - Computes sizes before and after cleanup.
 - Safety-first: confirmation message before cleaning.

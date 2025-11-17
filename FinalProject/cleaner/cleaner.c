@@ -27,6 +27,7 @@ int main(void)
             sleep(1);
             printf(GREEN "================ MAC CLEANUP =================\n");
             printf("Bye! See you next time your MacBook freeze!\n" RESET);
+            printf("\n");
             break;
         }
 
